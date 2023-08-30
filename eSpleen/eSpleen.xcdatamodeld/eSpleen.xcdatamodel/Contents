@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="18A326g" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="File" representedClassName="File" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlPath" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="trophy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trophy" inverseName="files" inverseEntity="Trophy" syncable="YES"/>
+    </entity>
+    <entity name="Match" representedClassName="Match" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="initialScore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scoreAdds" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participation" inverseName="match" inverseEntity="Participation" syncable="YES"/>
+    </entity>
+    <entity name="Participation" representedClassName="Participation" syncable="YES">
+        <attribute name="corner" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="match" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Match" inverseName="participants" inverseEntity="Match" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="participations" inverseEntity="Player" syncable="YES"/>
+        <relationship name="trophies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trophy" inverseName="participations" inverseEntity="Trophy" syncable="YES"/>
+    </entity>
+    <entity name="Player" representedClassName="Player" syncable="YES">
+        <attribute name="abID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebookID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="forenames" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gamecenterID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameHash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="surenames" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitterID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="participations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participation" inverseName="player" inverseEntity="Participation" syncable="YES"/>
+    </entity>
+    <entity name="Point" representedClassName="Point" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="proofs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Proof" inverseName="point" inverseEntity="Proof" syncable="YES"/>
+        <relationship name="trophy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trophy" inverseName="points" inverseEntity="Trophy" syncable="YES"/>
+    </entity>
+    <entity name="Proof" representedClassName="File" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlPath" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="point" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Point" inverseName="proofs" inverseEntity="Point" syncable="YES"/>
+    </entity>
+    <entity name="Trophy" representedClassName="Trophy" syncable="YES">
+        <attribute name="approved" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="groupTrophy" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="files" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="File" inverseName="trophy" inverseEntity="File" syncable="YES"/>
+        <relationship name="participations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participation" inverseName="trophies" inverseEntity="Participation" syncable="YES"/>
+        <relationship name="points" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Point" inverseName="trophy" inverseEntity="Point" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="File" positionX="135" positionY="-225" width="128" height="120"/>
+        <element name="Match" positionX="-54" positionY="-9" width="128" height="135"/>
+        <element name="Participation" positionX="-27" positionY="36" width="128" height="105"/>
+        <element name="Player" positionX="304" positionY="-387" width="128" height="180"/>
+        <element name="Point" positionX="126" positionY="-234" width="128" height="120"/>
+        <element name="Proof" positionX="-45" positionY="72" width="128" height="120"/>
+        <element name="Trophy" positionX="-45" positionY="36" width="128" height="195"/>
+    </elements>
+</model>
