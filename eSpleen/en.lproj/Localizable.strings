@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  eSpleen
+
+  Created by Samir Augusto Gartner Arias on 13/03/15.
+  Copyright (c) 2015 Samir Gartner. All rights reserved.
+*/
+
+
+"Give the trophy a name" = "Give the trophy a name";
+"Trophy Name" = "Trophy Name";
+"Cancel" = "Cancel";
+"OK" = "OK";
+"Choose Person" = "Choose Person";
+"Show Instructions" = "Show Instructions";
+"Contact us" = "Contact us";
+"Unknown Contact" = "Unknown Contact";
+"Delete match" = "Delete match";
+"Alert" = "Alert";
+"Your device cannot send emails" = "Your device cannot send emails";
+"Delete %d Trophy(ies)" = "Delete %d Trophy(ies)";
+"Are you sure you want to delete %d trophy(es)" = "Are you sure you want to delete %d trophy(es)";
+"Are you sure you want to delete the match?" = "Are you sure you want to delete the match?";

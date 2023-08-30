@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  eSpleen
+
+  Created by Samir Augusto Gartner Arias on 13/03/15.
+  Copyright (c) 2015 Samir Gartner. All rights reserved.
+*/
+
+
+"Give the trophy a name" = "Give the trophy a name";
+"Trophy Name" = "Trophy Name";
+"Cancel" = "Cancel";
+"OK" = "OK";
+"Select 2 Persons" = "Select 2 Persons";
+"Instructions" = "Instructions";
+"Contact us" = "Contact us";
+"Unknown Contact" = "Unknown Contact";
+"Delete match" = "Delete match";
+"Alert" = "Alert";
+"Your device cannot send emails" = "Your device cannot send emails";
+"Delete %d Trophy(ies)" = "Delete %d Trophy(ies)";
+"Are you sure you want to delete %d trophy(es)" = "Are you sure you want to delete %d trophy(es)";
+"Are you sure you want to delete the match?" = "Are you sure you want to delete the match?";
+"Contacts Acccess" = "Contacts Acccess";
+"eSpleen requires access to your contacts, the app does not send any data, we do not spy on you." = "eSpleen requires access to your contacts, the app does not send any data, we do not spy on you.";
+"Yes Take me to Privacy Settings" = "Yes Take me to Privacy Settings";
+"No I'll do it later" = "No I'll do it later";
+"You must select TWO players" = "You must select TWO players";
+"Select my contact card" = "Select my contact card";
+"Unknown Contact" = "Unknown Contact";

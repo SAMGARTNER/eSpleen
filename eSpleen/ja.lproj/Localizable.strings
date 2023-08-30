@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  eSpleen
+
+  Created by Samir Augusto Gartner Arias on 13/03/15.
+  Copyright (c) 2015 Samir Gartner. All rights reserved.
+*/
+
+
+"Give the trophy a name" = "トロフィーに名前をつける";
+"Trophy Name" = "トロフィーの名前";
+"Cancel" = "キャンセル";
+"OK" = "OK";
+"Select 2 Persons" = "2人を選択";
+"Instructions" = "詳しい説明";
+"Contact us" = "お問い合わせ";
+"Unknown Contact" = "知らない相手からの連絡";
+"Delete match" = "マッチングを消去";
+"Alert" = "警告";
+"Your device cannot send emails" = "このデバイスではメールを送ることができません";
+"Delete %d Trophy(ies)" = "%dトロフィーを消去";
+"Are you sure you want to delete %d trophy(es)" = "%dトロフィーを消去しますか";
+"Are you sure you want to delete the match?" = "試合を消去しますか";
+"Contacts Acccess" = "連絡先へのアクセス";
+"eSpleen requires access to your contacts, the app does not send any data, we do not spy on you." = "eSpleenは、連絡先にアクセスする必要がありますが、このアプリは何もデータを送信せず、私たちはあなたをスパイしません。";
+"Yes Take me to Privacy Settings" = "個人情報設定をします";
+"No I'll do it later" = "今はしません";
+"You must select TWO players" = "プレイヤーを2人選んでください";
+"Select my contact card" = "私の連絡先カードを選択します";
+"Unknown Contact" = "未知の接触";
